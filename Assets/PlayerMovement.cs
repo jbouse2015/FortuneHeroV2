@@ -77,11 +77,12 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(up * jumpForce, ForceMode2D.Impulse);
         
         // Do appropriate animations for jumping
+        /* WORKING ON STILL - BRANDON ***
         if (moveHorizontal < 0) {
             animator.SetInteger("Jump", 2); // Jump left
         } else {
             animator.SetInteger("Jump", 1; // Jump right
-        }
-
+        } 
+        */
     }
 }
