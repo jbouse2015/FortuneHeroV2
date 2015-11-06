@@ -16,30 +16,39 @@ public class PlayerMovement : MonoBehaviour
 
     // Stop player from repeated jumping
     private float distToGround;
-    
+
+    // Animator instance
+    private Animator animator;
+
     void Start ()
     {
         // Gets Rigidbody for movement
         rb = GetComponent<Rigidbody2D>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+        animator = this.GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
     {
+
+
         // Calls Jumping method
         if (Input.GetKeyDown("w") || Input.GetKeyDown("up"))
             Jump();
 
         // Apply drag
         Vector2 forceDirection = new Vector2(Input.GetAxis("Horizontal"), 0.0f);
-        
+
         // Reduces drag when the player moves and stop faster when input stops
         rb.drag = Mathf.Lerp(maxDrag, 0, forceDirection.magnitude / speed);
-        
+
         // Reduces amount of force that acts on player if player is already moving
         float forceMultiplier = Mathf.Clamp01((speed - rb.velocity.magnitude) / speed);
         rb.AddForce(forceDirection * (forceMultiplier * Time.deltaTime * forceConstant));
+
     }
+        
 
     void FixedUpdate()
     {
@@ -48,13 +57,31 @@ public class PlayerMovement : MonoBehaviour
         Vector2 movement = new Vector2(moveHorizontal, 0.0f);
 
         rb.AddForce(movement * speed);
+
+        // Do appropriate animations for walking  
+        if (moveHorizontal < 0) {
+            animator.SetInteger("Direction", 2); // Go left
+        }
+        else {
+            animator.SetInteger("Direction", 1); // Go right
+        }
     }
+    
 
     // Jump method
     // Jump with space bar
     void Jump()
     {
+        float moveHorizontal = Input.GetAxis("Horizontal");
         Vector3 up = transform.TransformDirection(Vector3.up);
         rb.AddForce(up * jumpForce, ForceMode2D.Impulse);
+        
+        // Do appropriate animations for jumping
+        if (moveHorizontal < 0) {
+            animator.SetInteger("Jump", 2); // Jump left
+        } else {
+            animator.SetInteger("Jump", 1; // Jump right
+        }
+
     }
 }
