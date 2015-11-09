@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply drag
         Vector2 forceDirection = new Vector2(Input.GetAxis("Horizontal"), 0.0f);
+        float moveHorizontal = Input.GetAxis("Horizontal");
 
         // Reduces drag when the player moves and stop faster when input stops
         rb.drag = Mathf.Lerp(maxDrag, 0, forceDirection.magnitude / speed);
@@ -46,6 +47,16 @@ public class PlayerMovement : MonoBehaviour
         // Reduces amount of force that acts on player if player is already moving
         float forceMultiplier = Mathf.Clamp01((speed - rb.velocity.magnitude) / speed);
         rb.AddForce(forceDirection * (forceMultiplier * Time.deltaTime * forceConstant));
+
+        // Do appropriate animations for walking  
+        if (moveHorizontal < 0)
+        {
+            animator.SetInteger("Direction", 2); // Go left
+        }
+        else
+        {
+            animator.SetInteger("Direction", 1); // Go right
+        }
 
     }
         
@@ -58,13 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb.AddForce(movement * speed);
 
-        // Do appropriate animations for walking  
-        if (moveHorizontal < 0) {
-            animator.SetInteger("Direction", 2); // Go left
-        }
-        else {
-            animator.SetInteger("Direction", 1); // Go right
-        }
+      
     }
     
 
@@ -74,15 +79,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         Vector3 up = transform.TransformDirection(Vector3.up);
-        rb.AddForce(up * jumpForce, ForceMode2D.Impulse);
-        
-        // Do appropriate animations for jumping
-        /* WORKING ON STILL - BRANDON ***
-        if (moveHorizontal < 0) {
-            animator.SetInteger("Jump", 2); // Jump left
-        } else {
-            animator.SetInteger("Jump", 1; // Jump right
-        } 
-        */
+        rb.AddForce(up * jumpForce, ForceMode2D.Impulse);       
+       
     }
 }
