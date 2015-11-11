@@ -46,17 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Reduces amount of force that acts on player if player is already moving
         float forceMultiplier = Mathf.Clamp01((speed - rb.velocity.magnitude) / speed);
-        rb.AddForce(forceDirection * (forceMultiplier * Time.deltaTime * forceConstant));
-
-        // Do appropriate animations for walking  
-        if (moveHorizontal < 0)
-        {
-            animator.SetInteger("Direction", 2); // Go left
-        }
-        else
-        {
-            animator.SetInteger("Direction", 1); // Go right
-        }
+        rb.AddForce(forceDirection * (forceMultiplier * Time.deltaTime * forceConstant));        
 
     }
         
@@ -69,7 +59,17 @@ public class PlayerMovement : MonoBehaviour
 
         rb.AddForce(movement * speed);
 
-      
+        // Do appropriate animations for walking  
+        if (moveHorizontal < 0)
+        {
+            animator.SetInteger("Direction", 1); // Go left
+        }
+        else
+        {
+            animator.SetInteger("Direction", 2); // Go right
+        }
+
+
     }
     
 
