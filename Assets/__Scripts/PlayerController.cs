@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     /* **** PUBILC **** */
     public float walkSpeed = 2f;
+    public float runSpeed = 2f;
     public float jumpForce = 200f;
     public bool isGrounded;
     public int playerHealth = 100;
@@ -43,6 +44,10 @@ public class PlayerController : MonoBehaviour
         }
 
         Move();
+
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            Sprint();
+        }
 
         if (Input.GetButtonDown("Jump"))
             Jump();
@@ -92,6 +97,13 @@ public class PlayerController : MonoBehaviour
     void Attack() {
         animator.SetBool("Attacking", true);
     }
+
+    void Sprint() {
+        float movement = Input.GetAxis("Horizontal");
+        player.velocity = new Vector2(movement * walkSpeed * runSpeed, player.velocity.y);
+        animator.SetFloat("Walk", Mathf.Abs(movement));
+    }
+
 
     void Death() { }
 
