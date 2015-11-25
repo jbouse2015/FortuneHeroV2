@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Attacking", false);
 
         if (playerHealth <= 0)
-            Death();
+            Respawn();
     }
 
     void Move() {
@@ -109,12 +109,19 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Walk", Mathf.Abs(movement));
     }
 	
-	//Damage from hazards
+	//Damage from hazards and health pickups
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Hazard")
         {
             playerHealth -= 5;
+            SetHealthText();
+        }
+
+        if (collision.gameObject.tag == "Health")
+        {
+            playerHealth = 100;
+            Destroy(collision.gameObject);
             SetHealthText();
         }
     }
@@ -123,16 +130,6 @@ public class PlayerController : MonoBehaviour
     void SetHealthText()
     {
         healthText.text = "Health: " + playerHealth;
-    }
-
-
-    //Kill the player
-    void Death()
-    {
-        if (playerHealth <= 0)
-        {
-            Respawn();
-        }
     }
 
     //Respawn the player
