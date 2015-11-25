@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D player;
     private Animator animator;
     private bool facingRight;
-    private bool jumpedOnce;
     private bool jumpedTwice;
 
     /* **** ON START OF GAME, SETUP PLAYER **** */
@@ -31,7 +30,6 @@ public class PlayerController : MonoBehaviour
         player = this.GetComponent<Rigidbody2D>();
         animator = player.GetComponent<Animator>();
         isGrounded = true;
-        jumpedOnce = false;
         jumpedTwice = false;
         facingRight = true;
 		playerHealth = 100;
@@ -44,7 +42,6 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded) {
             animator.SetBool("Jumping", false);
-            jumpedOnce = false;
             jumpedTwice = false;
         }
 
@@ -91,7 +88,6 @@ public class PlayerController : MonoBehaviour
         if (isGrounded) {
             player.AddForce(new Vector2(0, jumpForce));
             animator.SetBool("Jumping", true);
-            jumpedOnce = true;
         // If player is in the air, they made a single jump
         } else if (!isGrounded) {
             player.AddForce(new Vector2(0, jumpForce));
