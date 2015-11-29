@@ -22,17 +22,13 @@ public class PlayerController : MonoBehaviour
     /* **** PRIVATE **** */
     private Rigidbody2D player;
     private Animator animator;
-    private SpriteRenderer playerRenderer;
     private bool facingRight;
-    private float timeBetweenJumps = 0.3f;
-    private float jumpTimeStamp;
     private bool jumpedTwice;
 
     /* **** ON START OF GAME, SETUP PLAYER **** */
     void Start() {
         player = this.GetComponent<Rigidbody2D>();
         animator = player.GetComponent<Animator>();
-        playerRenderer = player.GetComponent<SpriteRenderer>();
         isGrounded = true;
         jumpedTwice = false;
         facingRight = true;
@@ -55,10 +51,8 @@ public class PlayerController : MonoBehaviour
             Sprint();
         }
 
-        if (Input.GetButtonDown("Jump") && Time.time >= jumpTimeStamp) {
+        if (Input.GetButtonDown("Jump"))
             Jump();
-            jumpTimeStamp = Time.time + timeBetweenJumps;
-        }
 
         if (Input.GetMouseButtonDown(0))
             Attack();
@@ -82,17 +76,19 @@ public class PlayerController : MonoBehaviour
     }
 
     void Jump() {
+        Thread.Sleep(10);
         animator.SetBool("Jumping", true);
         // First check if the player has maxed out jumps and is still in the air
         if (!isGrounded && jumpedTwice) {
             // THEN GTFO
+            return;
         }
 
         // If player is on ground
         if (isGrounded) {
             player.AddForce(new Vector2(0, jumpForce));
             animator.SetBool("Jumping", true);
-            // If player is in the air, they made a single jump
+        // If player is in the air, they made a single jump
         } else if (!isGrounded) {
             player.AddForce(new Vector2(0, jumpForce));
             jumpedTwice = true;
@@ -114,7 +110,6 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Hazard")
         {
-            StartCoroutine(showDamage());   // damage is visible
             playerHealth -= 5;
             SetHealthText();
         }
@@ -125,14 +120,6 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             SetHealthText();
         }
-    }
- 
-    IEnumerator showDamage() {
-        // Shade player in Red to show damage
-        playerRenderer.color = Color.red;
-        yield return new WaitForSeconds(1);
-        // Return player to regular color
-        playerRenderer.color = Color.white;
     }
 
     //Set playerHealth ui text
