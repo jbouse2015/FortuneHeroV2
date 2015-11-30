@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: ad8ac1d0b855db4449c4f073806f48a5
+timeCreated: 1448141474
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bat_flap_0
+    21300002: bat_flap_1
+    21300004: bat_flap_2
+    21300006: bat_flap_3
+    21300008: bat_flap_4
+    21300010: bat_flap_5
+    21300012: bat_flap_6
+    21300014: bat_flap_7
+    21300016: bat_flap_8
+    21300018: bat_flap_9
+    21300020: bat_idle
+    21300022: bat_sheet_20
+    21300024: bat_sheet_21
+    21300026: bat_sheet_22
+    21300028: bat_sheet_23
+    21300030: bat_sheet_24
+    21300032: bat_sheet_25
+    21300034: bat_sheet_26
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: bat_flap_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 243
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_flap_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 241
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_flap_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 243
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_flap_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 236
+        width: 49
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_flap_4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 237
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_flap_5
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 225
+        width: 17
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_flap_6
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 236
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_flap_7
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 243
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_flap_8
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 239
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_flap_9
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 238
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_idle
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 190
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 121
+        width: 38
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 133
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 129
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 112
+        width: 79
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 117
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bat_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 102
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
