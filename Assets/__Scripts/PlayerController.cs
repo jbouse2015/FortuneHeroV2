@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 using System;
 using System.Threading;
@@ -31,39 +32,56 @@ public class PlayerController : MonoBehaviour
         jumpedOnce = false;
         jumpedTwice = false;
         facingRight = true;
+		Debug.Log (facingRight);
     }
 
     /* **** EXECUTED ONCE PER PHYSICS STEP **** */
     void Update() {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+		isGrounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 
-        if (isGrounded) {
-            animator.SetBool("Jumping", false);
-            jumpedOnce = false;
-            jumpedTwice = false;
-        }
+		if (isGrounded) {
+			animator.SetBool ("Jumping", false);
+			jumpedOnce = false;
+			jumpedTwice = false;
+		}
 
-        Move();
+		Move ();
 
-        if (Input.GetKey(KeyCode.LeftShift)) {
-            Sprint();
-        }
+		if (Input.GetKey (KeyCode.LeftShift)) {
+			Sprint ();
+		}
 
-        if (Input.GetButtonDown("Jump"))
-            Jump();
+		if (Input.GetButtonDown ("Jump")) {
+			Debug.Log ("Jumping in Process");
+			Jump ();
+			Debug.Log ("Jumping Ended");
+		}
+		if (Input.GetMouseButtonDown (0)) {
+			GetComponent<Animator> ().Play ("PlayerAttackAnim");
+			Attack ();
+		}
+	
 
-        if (Input.GetMouseButtonDown(0))
-            Attack();
+		if (Input.GetMouseButtonUp (0))
+			animator.SetBool ("Attacking", false);
+		if (animator.GetBool ("SwordAttack"))
+			animator.SetBool ("SwordAttack", false);
+		if (Input.GetKeyDown ("o")) {
+			animator.SetBool ("SwordAttack", true);
+			GetComponent<Animator>().Play("playerSwordSwing");
+		}
+			
 
-        if (Input.GetMouseButtonUp(0))
-            animator.SetBool("Attacking", false);
-
-        if (playerHealth <= 0)
+		//if (Input.GetKeyDown ("o"))
+			//animator.SetBool ("SwordAttack", false);
+		if (playerHealth <= 0)
             Death();
+
     }
 
     void Move() {
         float movement = Input.GetAxis("Horizontal");
+
         player.velocity = new Vector2(movement * walkSpeed, player.velocity.y);
         animator.SetFloat("Walk", Mathf.Abs(movement));
         if (movement > 0 && !facingRight) {
@@ -73,17 +91,22 @@ public class PlayerController : MonoBehaviour
         } 
     }
 
+	public Rigidbody2D getPlayer(){
+		return player;
+	}
     void Jump() {
         Thread.Sleep(10);
         animator.SetBool("Jumping", true);
         // First check if the player has maxed out jumps and is still in the air
         if (!isGrounded && jumpedTwice) {
+
             // THEN GTFO
             return;
         }
 
         // If player is on ground
         if (isGrounded) {
+
             player.AddForce(new Vector2(0, jumpForce));
             animator.SetBool("Jumping", true);
             jumpedOnce = true;
@@ -119,4 +142,8 @@ public class PlayerController : MonoBehaviour
             theScale.x *= -1;
             transform.localScale = theScale;        
     }
+
+	public bool isFacingRight(){
+		return facingRight;
+	}
 }
