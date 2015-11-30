@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     /* **** PRIVATE **** */
     private Rigidbody2D player;
     private Animator animator;
+	private SpriteRenderer sprd;
     private bool facingRight;
     private bool jumpedTwice;
 	private float timeBetweenJumps = 0.3f;
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     void Start() {
         player = this.GetComponent<Rigidbody2D>();
         animator = player.GetComponent<Animator>();
+		sprd = GetComponentInChildren<SpriteRenderer> ();
         isGrounded = true;
         jumpedTwice = false;
         facingRight = true;
@@ -115,6 +117,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Hazard")
         {
             playerHealth -= 5;
+			StartCoroutine(ShowDamage ());
             SetHealthText();
         }
 
@@ -126,7 +129,9 @@ public class PlayerController : MonoBehaviour
         }
 
 		if (collision.gameObject.tag == "EnemyProjectile") {
+			Destroy(collision.gameObject);
 			playerHealth -= 10;
+			StartCoroutine(ShowDamage ());
 			SetHealthText();
 		}
     }
@@ -144,6 +149,12 @@ public class PlayerController : MonoBehaviour
         playerHealth = 100;
         SetHealthText();
     }
+
+	IEnumerator ShowDamage() {
+		sprd.color = Color.red;
+		yield return new WaitForSeconds(1);
+		sprd.color = Color.white;
+	}
 
     /* Flip ensures smooth animations for the object. Rather than run an animation
      * for each direction the object faces, it simply turns the animation the opposite
