@@ -124,6 +124,11 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             SetHealthText();
         }
+
+		if (collision.gameObject.tag == "EnemyProjectile") {
+			playerHealth -= 10;
+			SetHealthText();
+		}
     }
 
     //Set playerHealth ui text
