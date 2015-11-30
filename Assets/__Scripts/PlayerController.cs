@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool facingRight;
     private bool jumpedTwice;
+	private float timeBetweenJumps = 0.3f;
+	private float jumpTimeStamp;
 
     /* **** ON START OF GAME, SETUP PLAYER **** */
     void Start() {
@@ -51,8 +53,10 @@ public class PlayerController : MonoBehaviour
             Sprint();
         }
 
-        if (Input.GetButtonDown("Jump"))
-            Jump();
+        if (Input.GetButtonDown ("Jump") && Time.time >= jumpTimeStamp) {
+			jumpTimeStamp = Time.time + timeBetweenJumps;
+			Jump ();
+		}
 
         if (Input.GetMouseButtonDown(0))
             Attack();
