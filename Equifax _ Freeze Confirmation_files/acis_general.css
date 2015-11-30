@@ -1,0 +1,1157 @@
+/* ******************** LAYOUT STYLES ******************** */
+.accessNav {
+	display:none;
+}
+* {
+	margin:0;
+	padding:0;
+}
+html {
+	font:.8em/1.4em Arial, Helvetica, sans-serif;
+	color:#7d7d7d;
+}
+/*input{
+border-bottom-color: aqua;
+border-right-color: black;
+border-left-color: black;
+border-top-color: black;
+}*/
+a {
+	color:#7d7d7d;
+}
+a:hover, .selected > a {
+	color:#4d4d4d;
+}
+body {
+	background:#8b8b8b url(https://www.equifax.com/cp/images/bgBody.gif) repeat-x;	
+}
+#container {
+	position:relative;
+	margin:0 auto;
+	width:912px;
+}
+#header {
+	position:relative;
+	background:transparent url(https://www.equifax.com/cp/images/bgGlobalNav.gif) no-repeat bottom right;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	height:140px;
+	width:912px;
+}
+html>body #header {
+	height:140px;
+}
+#mainTab {
+	background:transparent url(https://www.equifax.com/cp/images/bgMainTab.gif) no-repeat 0 0;
+	float:left;
+	margin:87px 0 0 0;
+	height:36px;
+	width:299px;
+	color:#959595;
+	font-size:1.7em;
+	padding: 15px 0px 0px 20px;
+}
+html>body #mainTab {
+	height:51px;
+}
+#homeLink a {
+	background:transparent url(https://www.equifax.com/cp/images/efxLogo.png) no-repeat top left;
+	display:block;
+	position:absolute;
+	top:20px;
+	height:34px;
+	width:172px;
+	text-indent:-9999em;
+	margin:0px 0px 0px 0px;
+}
+
+/* begin global navigation */
+#globalNav {
+	position:absolute;
+	top:107px;
+	left:600px;
+	font-size:.9em;
+}
+#globalNav dt {
+	display:none;
+}
+#globalNav dd {
+	background:transparent url(https://www.equifax.com/cp/images/sepGlobalNav.gif) no-repeat center left;
+	float:left;
+	padding:0 2.1em;
+}
+/* disable separator for first link */
+#globalNav dt + dd {
+	background:none;
+}
+#globalNav a {
+	text-decoration:none;
+}
+#globalNav .selected a {
+	font-weight:bold;
+}
+/* end global navigation */
+
+/* begin content */
+#content {
+	background:#fff url(https://www.equifax.com/cp/images/bgMain.gif) repeat-y;
+	color:#4d4d4d;
+	padding:30px 10px 0 4px;
+	width:898px;
+}
+#content:after {
+	display:block;
+	clear:both;
+	content:".";
+	visibility:hidden;
+	font-size:0;
+	height:0;
+}
+
+/* begin basic */
+#content object {
+	margin-left:30px;
+}
+#content a {
+	color:#0000FF;
+}
+#content a img {
+	border:none;
+}
+#content ul {
+	list-style:none;
+}
+/* end basics for layout */
+/* ******************** END LAYOUT STYLES ******************** */
+
+/* ******************** SUB PAGES MAIN CONTENT AND RIGHT COLUMN ******************** */
+
+/* main content area styles for non-home pages */
+.mainContent {
+	margin:0px 0px 0px 10px;
+	width:593px;
+	float:left;
+	padding: 0px 0px 20px 0px;
+}
+html>body .mainContent {
+	margin:0px 0px 0px 30px;
+}
+.mainContentFull {
+	float: left;
+	margin:0px 0px 0px 10px;
+	padding: 0px 0px 20px 0px;
+	width:826px;
+}
+html>body .mainContentFull {
+	margin:0px 0px 0px 30px;
+	padding: 0px 0px 20px 0px;
+}
+
+/* begin main and sub nav */
+/* navigation included in mainContent */
+ul#mainNav {
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	width:593px;
+}
+ul#mainNav li {
+	display:inline;
+	float: left;
+	list-style:none;
+}
+/* Active tabs */
+ul#mainNav li.activeBlueMain { 
+	background:transparent url(https://www.equifax.com/cp/images/tab_blue_active.gif) no-repeat;
+	height:34px;
+	line-height: 1.3em;
+	margin:0px 0px 0px 0px;
+	padding:15px 0px 0px 30px;
+	width:179px;
+}	
+ul#mainNav li.activeGreenMain { 
+	background:transparent url(https://www.equifax.com/cp/images/tab_green_active.gif) no-repeat;
+	height:41px;
+	line-height: 1.2em;
+	padding:8px 0px 0px 35px;
+	width:174px;
+}
+ul#mainNav li.activeOrangeMain { 
+	background:transparent url(https://www.equifax.com/cp/images/tab_orange_active.gif) no-repeat;
+	height:31px;
+	line-height: 1.2em;
+	padding:18px 0px 0px 35px;
+	width:174px;
+}
+
+/* Inactive tabs */
+ul#mainNav li.inactiveBlueMain, ul#mainNav li.inactiveGreenMain, ul#mainNav li.inactiveOrangeMain {
+	margin:0px 0px 0px 0px;
+	padding:10px 0px 0px 30px;
+	height:39px;
+	line-height:0.9em;
+	width:156px;
+}
+ul#mainNav li.inactiveBlueMain { 
+	background:transparent url(https://www.equifax.com/cp/images/tab_blue_inactive.gif) no-repeat bottom left;
+	margin:0px 3px 0px 5px;
+	padding:25px 0px 0px 30px;
+	height:24px;
+	width:151px;
+}
+ul#mainNav li.inactiveGreenMain {
+	background:transparent url(https://www.equifax.com/cp/images/tab_green_inactive.gif) no-repeat bottom left; 
+	padding:20px 0px 0px 30px;
+	height:29px;
+}
+ul#mainNav li.inactiveOrangeMain { 
+	background:transparent url(https://www.equifax.com/cp/images/tab_orange_inactive.gif) no-repeat bottom left; 
+	padding:25px 0px 0px 30px;
+	height:24px;
+}
+/* tabs active link styles */
+ul#mainNav li.activeBlueMain a, ul#mainNav li.activeGreenMain a, ul#mainNav li.activeOrangeMain a {
+	font-size:1.15em;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+ul#mainNav li.activeBlueMain a span, ul#mainNav li.activeGreenMain a span, ul#mainNav li.activeOrangeMain a span {
+	display: block;
+}
+ul#mainNav li.activeBlueMain a {
+	color:#fff;
+} 
+ul#mainNav li.activeGreenMain a {
+	color:#fff;
+} 
+ul#mainNav li.activeOrangeMain a {
+	color:#fff;
+} 
+
+/* tabs inactive link styles */
+ul#mainNav li.inactiveBlueMain a, ul#mainNav li.inactiveGreenMain a, ul#mainNav li.inactiveOrangeMain a {
+	font-size:0.95em;
+	font-weight:bold;
+	text-decoration:none;
+}
+ul#mainNav li.inactiveBlueMain a {
+	color:#7599ae;
+} 
+ul#mainNav li.inactiveGreenMain a {
+	color:#71a542;
+} 
+ul#mainNav li.inactiveOrangeMain a {
+	color:#f26522;
+} 
+
+/* sub nav background under tabs */
+ul#subNavBlue, ul#subNavGreen, ul#subNavOrange {
+	clear: both;
+	float: left;
+	list-style:none;
+	margin:0px 0px 0px 0px;
+	padding: 0;
+	height:36px;
+	width:593px;
+}
+ul#subNavBlue {
+	background:#7599ae url(https://www.equifax.com/cp/images/bg_three_sub_tabs_blue.gif) no-repeat 0 0;
+}
+ul#subNavGreen {
+	background:#94bc6e url(https://www.equifax.com/cp/images/bg_three_sub_tabs_green.gif) no-repeat 0 0;
+}
+ul#subNavOrange {
+	background:transparent url(https://www.equifax.com/cp/images/bg_three_sub_tabs_orange.gif) no-repeat 0 0;
+}
+
+/* sub nav active boxes */
+ul#subNavBlue li.activeBlueSub, ul#subNavGreen li.activeGreenSub, ul#subNavOrange li.activeOrangeSub {
+	float: left;
+	height:23px;
+	margin:5px 0px 5px 4px;
+	padding:3px 0px 0px 0px;
+	width:191px;
+}
+ul#subNavBlue li.activeBlueSub { 
+	background:transparent url(https://www.equifax.com/cp/images/sub_tab_blue_active.gif) no-repeat;
+	padding:3px 0px 0px 5px;
+	width:186px;
+}
+ul#subNavGreen li.activeGreenSub { 
+	background:transparent url(https://www.equifax.com/cp/images/sub_tab_green_active.gif) no-repeat;
+	padding:3px 0px 0px 5px;
+	width:186px;
+}
+ul#subNavOrange li.activeOrangeSub { 
+	background:transparent url(https://www.equifax.com/cp/images/sub_tab_orange_active.gif) no-repeat;
+	padding:3px 0px 0px 5px;
+	width:186px;
+}
+
+/* sub nav inactive boxes */
+ul#subNavBlue li.inactiveBlueSub, ul#subNavGreen li.inactiveGreenSub, ul#subNavOrange li.inactiveOrangeSub {
+	float: left;
+	height:23px;
+	margin:5px 0px 5px 4px;
+	padding:3px 0px 0px 2px;
+	width:191px;
+}
+ul#subNavBlue li.inactiveBlueSub { 
+	background:transparent url(https://www.equifax.com/cp/images/sub_tab_blue_inactive.gif) no-repeat;
+	padding:3px 0px 0px 5px;
+	width:188px;
+}
+ul#subNavGreen li.inactiveGreenSub { 
+	background:transparent url(https://www.equifax.com/cp/images/sub_tab_green_inactive.gif) no-repeat;
+	padding:3px 0px 0px 5px;
+	width:188px;
+}
+ul#subNavOrange li.inactiveOrangeSub { 
+	background:transparent url(https://www.equifax.com/cp/images/sub_tab_orange_inactive.gif) no-repeat;
+	padding:3px 0px 0px 5px;
+	width:188px;
+}
+
+/* sub nav active links */
+ul#subNavBlue li.activeBlueSub a, ul#subNavGreen li.activeGreenSub a, ul#subNavOrange li.activeOrangeSub a {
+	font-size:0.82em;
+	font-weight:bold;
+	line-height:0.5em;
+	text-decoration:none;
+}
+ul#subNavBlue li.activeBlueSub a span, ul#subNavGreen li.activeGreenSub a span, ul#subNavOrange li.activeOrangeSub a span {
+	display: block;
+}
+ul#subNavBlue li.activeBlueSub a { 
+	color:#fff;
+}
+ul#subNavGreen li.activeGreenSub a { 
+	color:#fff;
+}
+ul#subNavOrange li.activeOrangeSub a { 
+	color:#fff;
+}
+
+/* sub nav inactive links */
+ul#subNavBlue li.inactiveBlueSub a, ul#subNavGreen li.inactiveGreenSub a, ul#subNavOrange li.inactiveOrangeSub a { 	
+	font-size:0.8em;
+	font-weight:bold;
+	line-height:0.5em;
+	text-decoration:none;
+}
+ul#subNavBlue li.inactiveBlueSub a span, ul#subNavBlue li.inactiveGreenSub a span, ul#subNavBlue li.inactiveOrangeSub a span { 	
+	display: block;
+}
+ul#subNavBlue li.inactiveBlueSub a {
+	color:#c9d5dd;
+}
+ul#subNavGreen li.inactiveGreenSub a { /* get color from comp */
+	color:#bfdcca;
+}
+ul#subNavOrange li.inactiveOrangeSub a { /* get color from comp */
+	color:#dea692;
+}
+
+/* no sub navigation */
+#subNavNone {
+	background: transparent url(https://www.equifax.com/cp/images/bg_no_subTabs.gif) repeat-x 0 0;
+	border: solid 1px #ccc;
+	clear: both;
+	float: left;
+	display: block;
+	height: 17px;
+	margin:0px 0px 0px 0px;
+	padding: 0;
+	width:834px;
+}
+/* end main and sub nav */
+.containerForMainTextWithLady  { /* for top section that is narrow text plus lady */
+	margin:-15px 0px 0px 0px;
+	padding:0px 20px 0px 0px;
+	float:left;
+	width: 834px;
+}
+.mainContentText {
+	margin:20px 0px 0px 0px;
+	padding:0px 10px 0px 0px;
+	float:left;
+	width:580px;
+}
+.mainContentText p.leftPadding {
+	padding-left: 18px;
+}
+.mainContentTextFull  { /* for full view */
+	margin:35px 0px 0px 0px;
+	padding:0px 20px 20px 0px;
+	float:left;
+	width: 834px;
+}
+.mainContentTextLeft  { /* for sub pages that doesn't have floating people photos in the right column */
+	margin:35px 0px 0px 0px;
+	padding:0px 20px 20px 0px;
+	float:left;
+	width: 553px;
+}
+#content .mainContent .mainContentText a, #content .mainContent .mainContentText a:visited, #content .mainContentFull .mainContentTextLeft a, #content .mainContentFull .mainContentTextLeft a:visited {
+	color: #002157;
+	text-decoration: underline;
+}
+#content .mainContent .mainContentText a:hover, #content .mainContentFull .mainContentTextLeft a:hover {
+	color: #545454;
+	text-decoration: underline;
+}
+
+/* basics for mainContent */
+.blue { color:#002157; }
+.green { color:#71a542; }
+.orange { color:#f26522; }
+.lightBlue { color:#5787a0; }
+.red { color:#990000; }
+
+h1{  
+	font-size: 1.8em;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+}
+h1.big {  
+	font-size: 1.4em;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+	color:#f26522;
+}
+
+h2.orange	{
+	font-size: 1.8em;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+	color:#f26522;	
+}
+
+h2.big {  
+	font-size: 1.4em;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+	color:#f26522;
+}
+
+h1.bigblack {  
+	font-size: 1.4em;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+	
+}
+h1.bigger {  
+	font-size: 1.6em;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+	color:#f26522;
+}
+
+h2.bigger {  
+	font-size: 1.6em;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+	color:#f26522;
+}
+
+
+h2.small{  
+	font-size: 1.2em;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+	color:#f26522;
+}
+
+h2.smallblack{  
+	font-size: 1.2em;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+	
+}
+
+h3.smallblack{  
+	font-size: 1.2em;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+	
+}
+h2.blueFussyArrow {
+	background: #fff url(https://www.equifax.com/cp/images/icon_fuzzy_arrow_blue.gif) no-repeat 0 12px; 
+	clear: both;
+	color:#002157; 
+	font-size: 1.6em;
+	margin:0px 0px 10px 0px;
+	padding: 5px 0px 0px 18px;
+}
+html>body h2.blueFussyArrow {
+	background: #fff url(https://www.equifax.com/cp/images/icon_fuzzy_arrow_blue.gif) no-repeat 0 8px; 
+}
+h2.greenFussyArrow {
+	background: #fff url(https://www.equifax.com/cp/images/icon_fuzzy_arrow_green.gif) no-repeat 0 12px; 
+	clear: both;
+	color:#71a542; 
+	font-size: 1.6em;
+	margin:0px 0px 10px 0px;
+	padding: 5px 0px 0px 18px;
+}
+html>body h2.greenFussyArrow {
+	background: #fff url(https://www.equifax.com/cp/images/icon_fuzzy_arrow_green.gif) no-repeat 0 8px; 
+}
+h2.orangeFussyArrow {
+	background: #fff url(https://www.equifax.com/cp/images/icon_fuzzy_arrow_orange.gif) no-repeat 0 12px; 
+	clear: both;
+	color:#f26522; 
+	font-size: 1.6em;
+	margin:0px 0px 10px 0px;
+	padding: 5px 0px 0px 18px;
+}
+html>body h2.orangeFussyArrow {
+	background: #fff url(https://www.equifax.com/cp/images/icon_fuzzy_arrow_orange.gif) no-repeat 0 8px; 
+}
+/* used in fancy content box */
+h3{
+	font-size: 1.6em;
+	margin:0px 0px 10px 0px;
+}
+h4 {
+	font-size: 1.3em;
+	margin:0px 0px 10px 0px;
+}
+h4.small	{
+	font-size: 1.6em;
+	margin:0px 0px 10px 0px;
+}
+
+
+hr {
+	border-top:#b7b7b7 1px dotted;
+	height:1px;
+	margin:5px 0px 5px 0px;
+}
+p {
+	margin:3px 0px 7px 0px;
+}
+p.small {
+	font-size:0.8em;
+}
+span.small {
+	font-size:0.8em;
+	margin-left:15px;
+}
+ul.bulletedList {
+	color: #545454;
+	font-size: 0.9em;
+	list-style: none;
+	margin-left:20px;
+	margin-bottom:7px;
+}
+ul.bulletedList li {
+	background: transparent url(https://www.equifax.com/cp/images/bullet_round_small_gray.gif) no-repeat 0 7px;
+	padding: 0 0 0 10px;
+}
+ul.bulletedList li ul {
+	margin-left:20px;
+}
+ul.bulletedList li ul li {
+	background: transparent url(https://www.equifax.com/cp/images/bullet_dush_gray.gif) no-repeat 0 7px;
+	padding: 0 0 0 10px;
+}
+ul.bulletedList li ul.noBullets {
+	margin-left:10px;
+}
+ul.bulletedList li ul.noBullets li {
+	list-style:none;
+	list-style-position:inside;
+}
+ul.bulletedList li address {
+	font-style: normal;
+}
+
+ol.number {
+	color: #545454;
+	margin-left:40px;
+	margin-bottom:10px;
+	margin-right: 0px;
+}
+ol.number li{
+	color: #545454;
+	margin: 0;
+	padding-bottom:7px;
+	padding-left:0px;
+}
+
+ol.number li ul.bulletedList {
+	color: #545454;
+	font-size: 0.9em;
+	list-style: none;
+	margin-bottom: 0;
+	margin-left:0;
+}
+ol.number li ul.bulletedList li {
+	background: transparent url(https://www.equifax.com/cp/images/bullet_round_small_gray.gif) no-repeat 0 7px;
+	padding: 0 0 0 10px;
+}
+ul.bulletedList li ol.number {
+	color: #545454;
+	margin: 0 0 5px 40px;
+}
+ul.bulletedList li ol.number li {
+	background: none;
+	color: #545454;
+	margin: 0;
+	padding-bottom:0px;
+	padding-left:0px;
+}
+
+/******** for general form - no label text ********/
+form.noLabel {
+	margin:0 0 10px 10px;
+	padding: 0;
+}
+form.noLabel fieldset {
+	border: none;
+	margin:0;
+	padding: 0;
+}
+form.noLabel legend {
+	visibility: hidden;
+	height: 0;
+	margin:-10px 0 0 0;
+	padding: 0;
+}
+form.noLabel label{
+	width: 0;
+}
+form.noLabel input, form.noLabel select {
+	font-size: 0.8em;
+}
+form.noLabel input.Submit {
+	background: #fff url(https://www.equifax.com/cp/images/btn_form.gif) no-repeat 0 0;
+	border: none;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 0.85em;
+	font-weight: bold;
+	height: 1.8em;
+	letter-spacing: 0;
+	padding: 0px 0 0 5px;
+	margin: 3px 0 0 3px;
+	text-align: left;
+	width: 7.6em;
+}
+html>body form.noLabel input.Submit {
+	font-size: 0.7em;
+	height: 2.3em;
+	padding: 1px 0 2px 5px;
+	margin: 0 0 0 3px;
+	width: 7.2em;
+}
+
+/******** How it Works little box ********/
+.roundLittleBox {
+	background: transparent url(https://www.equifax.com/cp/images/bg_howitworks_round_middle.gif) repeat-y 0 0;
+	float: left;
+	padding: 0;
+	margin: 10px 0;
+	width: 545px;
+}
+.roundLittleBoxTop {
+	background: transparent url(https://www.equifax.com/cp/images/bg_howitworks_round_top.gif) no-repeat 0 0;
+	float: left;
+	padding: 0;
+	width: 545px;
+}
+
+.roundLittleBoxBottom {
+	background: transparent url(https://www.equifax.com/cp/images/bg_howitworks_round_bottom.gif) no-repeat left bottom;
+	padding: 0;
+	float: left;
+	width: 545px;
+}
+.roundLittleBox .Left {
+	float: left;
+	padding: 0px;
+	margin: 5px 10px 10px 10px;
+	width: 240px;
+}
+h3.blue1{
+ font-size: 1.3em;
+ color:#002157;
+ margin:0px 0px 10px 0px;
+}
+
+.roundLittleBox .Right {
+	float: right;
+	padding: 0px;
+	margin: 5px 0 10px 0;
+	width: 240px;
+}
+.roundLittleBox ol.number {
+	color: #545454;
+	font-size: 0.85em;
+	margin: 0px 0px 5px 25px;
+}
+.roundLittleBox ol.number li{
+	color: #545454;
+	margin: 0;
+	padding-bottom:0px;
+	padding:0px;
+}
+.roundLittleBox .Left ol.number {
+	border-right: solid 1px #cecece;
+}
+.roundLittleBox h3.lightBlue {
+	display: block;
+	margin: 0;
+	padding: 10px 0 0 20px;
+}
+.roundLittleBox h4.orange {
+	display: block;
+	margin: 0;
+	padding: 10px 0 0 0;
+}
+table tr td.gray {
+	background-color:#e2e2e2;
+	padding:5px;
+}
+table tr td.gray2 {
+	background-color:#d9d9d9;
+	padding:5px;
+}
+/* end basics for mainContent */
+
+/* right column to hold large image and callouts */
+.rightColumn {
+	margin:0px 0px 0px 0px;
+	padding: 0;
+	width:243px;
+	float:right;
+}
+.rightColumnNoPics {
+	margin:-9px 0px 0px 0px;
+	padding: 0;
+	width:243px;
+	float:left;
+}
+.navigationOverlap img{
+	left:0px;
+	height:254px;
+	position:relative;
+	top:-9px;
+	width:243px;
+}
+.navigationOverlapNoImg img{
+	left:0px;
+	height:98px;
+	position:relative;
+	top:0px;
+	width:243px;
+}
+.credit101BoxTop {
+	background:transparent url(https://www.equifax.com/cp/images/bg_c101_round_top.gif) no-repeat top left;
+	width:245px;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+}
+.credit101BoxMiddle {
+	background:transparent url(https://www.equifax.com/cp/images/bg_c101_round_middle.gif) repeat-y;
+	width:245px;
+	margin:10px 0px 40px 0px;
+	padding:0px;
+}
+#content .rightColumn .credit101BoxMiddle a, #content .rightColumn .credit101BoxMiddle a:visited, #content .rightColumnNoPics .credit101BoxMiddle a, #content .rightColumnNoPics .credit101BoxMiddle a:visited {
+	color: #5787a0;
+	text-decoration: underline;
+}
+#content .rightColumn .credit101BoxMiddle a:hover, #content .rightColumnNoPics .credit101BoxMiddle a:hover {
+	color: #545454;
+	text-decoration: underline;
+}
+.credit101BoxMiddle h3 {
+	color:#f26522;
+	font-size: 1.3em;
+	margin:0px 10px 0px 10px;
+	padding:15px 5px 5px 5px ;
+	width:215px;
+}
+.credit101BoxMiddle p {
+	margin:10px 10px 10px 10px;
+	padding:5px;
+	width:215px;
+}
+
+.credit101BoxMiddle ul {
+	list-style: none;
+	padding-bottom:10px;
+}
+.credit101BoxMiddle ul li {
+	background: transparent url(https://www.equifax.com/cp/images/bullet_round_small_blue.gif) no-repeat 0 7px;
+	margin:0px 0px 3px 10px;
+	padding: 0 0 0 10px;
+	width:225px;
+}
+.credit101BoxBottom {
+	background:transparent url(https://www.equifax.com/cp/images/bg_c101_round_bottom.gif) no-repeat bottom left;
+	width:245px;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+}
+/* rightCol box for extra info */
+.rightColBoxTop {
+	background: url(../images/bg_rightCol_box_top.gif) no-repeat top left;
+	width:233px;
+	margin:0px 0px 0px 8px;
+	padding:0px;
+	
+}
+.rightColBoxTop h3 {
+	color:#f26522;
+	font-size: 1.3em;
+	margin:0px 10px 0px 10px;
+	padding:15px 5px 5px 5px ;
+	width:215px;
+}
+.rightColBoxMiddle {
+	background:transparent url(../images/bg_rightCol_box_middle.gif) repeat-y;
+	width:233px;
+	margin:0px 0px 10px 0px;
+	padding:0px;
+	float:right;
+}
+#content .rightColumn .rightColBoxMiddle a, #content .rightColumn .rightColBoxMiddle a:visited, #content .rightColumnNoPics .rightColBoxMiddle a, #content .rightColumnNoPics .rightColBoxMiddle a:visited {
+	color: #5787a0;
+	text-decoration: underline;
+}
+#content .rightColumn .rightColBoxMiddle a:hover, #content .rightColumnNoPics .rightColBoxMiddle a:hover {
+	color: #545454;
+	text-decoration: underline;
+}
+.rightColBoxMiddle h4 {
+	background:transparent url(../images/icon_arrow_orange.gif) no-repeat 3px 3px;
+	margin:20px 10px 3px 10px;
+	padding:0px 20px;
+	width:175px;
+	font-weight:bold;
+	font-size:1.1em;
+}
+.rightColBoxMiddle p {
+	margin:3px 10px 3px 30px;
+	padding:0px;
+	width:175px;
+}
+.rightColBoxBottom {
+	background:transparent url(../images/bg_rightCol_box_bottom.gif) no-repeat bottom left;
+	width:233px;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 20px 0px;
+	float:right;
+}
+/* end rightCol box for extra info */
+#learnAd  {
+	width:249px;
+}
+.learn {
+	height:146px;
+}
+.fraudIndex {
+	height:143px;
+}
+.rateFinder {
+	height:190px;
+}
+#learnAd p {
+	display: block;
+	width: 0;
+	height: 0;
+	overflow:hidden;
+}
+#learnAd p a {
+	float:right;
+	height:35px;
+	width:215px;
+	text-indent:-9999em;
+}
+/* end rightColumn */
+
+/* Red Button */
+#content .RedButton { /* Buy Now button - for other language, need to adjust the width */
+	background: transparent url(https://www.equifax.com/CMS/images/btns/btn_BuyNowMiddle.gif) repeat-x 0 0;
+	float: left;
+	height: 28px;
+	margin: 0 8px 5px 0px;
+	padding:0;
+	position: relative;
+	width: 9.0em; /* I.E. needs to have the width value */
+}
+#content .RedButtonLeft {
+	background: transparent url(https://www.equifax.com/CMS/images/btns/btn_BuyNowLeft.gif) no-repeat 0 0;
+	height: 28px;
+	padding: 0 0 0 8px;
+}
+#content .RedButtonRight {
+	background: transparent url(https://www.equifax.com/CMS/images/btns/btn_BuyNowRight.gif) no-repeat right top;
+	height: 28px;
+}
+#content .mainContent .mainContentText .RedButton a:link, #content .mainContent .mainContentText .RedButton a:visited, #content .mainContent .mainContentText .RedButton a:hover {
+	color: #fff;
+	font: 1.0em Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 26px;
+	margin: 0;
+	padding: 0 10px 0 0;
+	text-decoration: none;
+}
+/* ******************** END SUB PAGES MAIN CONTENT AND RIGHT COLUMN ******************** */
+
+/* ******************** FOOTER ******************** */
+#footer {
+	position:relative;
+	top:-32px;
+	left:0px;
+	background:transparent url(https://www.equifax.com/cp/images/bgFooter.gif) no-repeat 0 0;
+	font-size:0.9em;
+	line-height:2em;
+	color:#d7d7d7;
+	margin-top:30px;
+}
+#footer p {
+	padding:5px 10px 0 30px;
+}
+p#tagline {
+	height:35px;
+}
+#tagline a {
+	display:block;
+	float:right;
+	height:35px;
+	width:215px;
+	text-indent:-9999em;
+}
+#copyright {
+	clear:both;
+}
+#corpNav {
+	position:relative;
+	left:17.4em;
+	bottom:1.9em;
+}
+#corpNav dl {
+	position:absolute;
+	top:0px;
+	left:0;
+}
+#corpNav dt {
+	display:none;
+}
+#corpNav dd {
+	float:left;
+	border-left:1px solid #d7d7d7;
+	padding:0 4px;
+	line-height:1em;
+}
+#corpNav dt + dd { /* disable border for first link */
+	border-left:none;
+}
+#corpNav a {
+	text-decoration:none;
+	color:#d7d7d7;
+}
+a#forfooter {
+
+	text-decoration:none;
+	color:#d7d7d7;
+}
+
+span.buttonLargeCenter {
+		background: #9d0c0f url(https://www.equifax.com/CMS/images/bgs/bg_catPg_productButton.gif) repeat-x 0 0;
+/*	border-top: 2px #b51418 solid;
+	border-left:4px #910004 solid;
+	border-bottom:2px #830406 solid;
+	border-right:4px #830406 solid;*/
+		border-top: 2px #b51418 solid;
+	border-left:4px #910004 solid;
+	border-bottom:2px #830406 solid;
+	border-right:4px #830406 solid;
+	height:1.5em;
+	width:5em;
+	text-align:center;
+	/*margin-top: -10px;*/
+
+	font-size:1.2em;
+	text-align:center;
+	font-weight:bold;
+	position:relative;/*
+	background:#9d0c0f url(http://www.equifax.com/CMS/images/bgs/bg_catPg_featuredButton.gif) repeat-x 0 0;
+	border:2px #910004 solid;
+	border-bottom:2px #830406 solid;
+	border-top:2px #b51418 solid;
+	border-left:4px #910004 solid;
+	border-right:4px #830406 solid;
+	width:7em;
+	height:8em;
+	margin-top: -10px;
+	font-size:1.4em;
+	text-align:center;
+	font-weight:bold;*/
+}
+a#buttonLargeCenter{
+	color:#ffffff;
+	/*float: right;*/
+	font-size:1.2em;
+	font-weight:bold;
+	text-align:center;
+	padding:5px 5px 5px 5px;
+	text-decoration:none;
+}  
+
+span.buttonLargeLeft {
+	
+		background: #9d0c0f url(https://www.equifax.com/CMS/images/bgs/bg_catPg_productButton.gif) repeat-x 0 0;
+	border-top: 2px #b51418 solid;
+	border-left:4px #910004 solid;
+	border-bottom:2px #830406 solid;
+	border-right:4px #830406 solid;
+
+	height:1.4em;
+	width:5em;
+	text-align:center;
+	margin-top: -10px;
+
+	font-size:1.3em;
+	text-align:center;
+	font-weight:bold;
+	position:relative;
+	float: left;
+}
+a#buttonLargeLeft{
+	color:#ffffff;
+	/*float: right;*/
+	font-size:1.3em;
+	font-weight:bold;
+	text-align:center;
+	padding:5px 5px 5px 5px;
+	text-decoration:none;
+}  
+/*a#buttonSmallLeft {
+
+	color:#ffffff;
+	float: left;
+	font-size:1.3em;
+	font-weight:bold;
+	text-align:center;
+	padding:5px 5px 5px 5px;
+	text-decoration:none;
+}
+span.buttonSmallLeft{
+	
+	background: #9d0c0f url(http://www.equifax.com/CMS/images/bgs/bg_catPg_productButton.gif) repeat-x 0 0;
+	border-top: 2px #b51418 solid;
+	border-left:4px #910004 solid;
+	border-bottom:2px #830406 solid;
+	border-right:4px #830406 solid;
+	float:left;
+	height:1.4em;
+	width:3.5em;
+	margin-top: -10px;
+	font-size:1.5em;
+	text-align:center;
+	font-weight:bold;
+
+}*/
+a#buttonSmallRight{
+
+	
+	color:#ffffff;
+	/*float: right;*/
+	font-size:1.3em;
+	font-weight:bold;
+	text-align:center;
+	padding:5px 5px 5px 5px;
+	text-decoration:none;
+}
+
+
+a#buttonSmallRightBlurred{
+
+	/*float: right;*/
+	color:white;
+	font-size:1.3em;
+	font-weight:bold;
+	text-align:center;
+	padding:5px 5px 5px 5px;
+	text-decoration:none;
+}
+span.buttonSmallRightBlurred{
+	
+	background: gray; 
+	float:right;
+	height:1.5em;
+	width:3.5em;
+	text-align:center;
+	margin-top: -10px;
+
+	font-size:1.3em;
+	text-align:center;
+	font-weight:lighter;
+	position:relative;
+}
+span.buttonSmallRight{
+	
+	background: #9d0c0f url(https://www.equifax.com/CMS/images/bgs/bg_catPg_productButton.gif) repeat-x 0 0;
+	border-top: 2px #b51418 solid;
+	border-left:4px #910004 solid;
+	border-bottom:2px #830406 solid;
+	border-right:4px #830406 solid;
+	float:right;
+	height:1.4em;
+	width:5em;
+	text-align:center;
+	margin-top: -10px;
+
+	font-size:1.3em;
+	text-align:center;
+	font-weight:bold;
+	position:relative;
+}
+span.buttonSmallRightVisible{
+	
+	background: #9d0c0f url(https://www.equifax.com/CMS/images/bgs/bg_catPg_productButton.gif) repeat-x 0 0;
+	border-top: 2px #b51418 solid;
+	border-left:4px #910004 solid;
+	border-bottom:2px #830406 solid;
+	border-right:4px #830406 solid;
+	float:right;
+	height:1.4em;
+	width:3.5em;
+	text-align:center;
+	margin-top: -10px;
+
+	font-size:1.3em;
+	text-align:center;
+	font-weight:bold;
+	position:relative;
+}
+/*a.nextbutton
+{
+	color:#ffffff;
+	
+	font-size:1.3em;
+	font-weight:bold;
+	text-align:center;
+	padding:5px 5px 5px 5px;
+	text-decoration:none;
+}*/
+/* ******************** FOOTER ******************** */
+
+/* *****Hand Cursor***** */
+.handCursor{
+cursor: pointer;
+}
+/***********skip section*************/
+.SkipSection {
+	display:block;
+	height:0;
+	margin:0;
+	overflow:hidden;
+	width:0;
+}
