@@ -37,22 +37,18 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         jumpedTwice = false;
         facingRight = true;
-<<<<<<< HEAD
 		Debug.Log (facingRight);
-=======
 		playerHealth = 100;
 		SetHealthText();
->>>>>>> b6e2cc3e7c7da9e04f01b29a7a922e7ccb149162
     }
 
     /* **** EXECUTED ONCE PER PHYSICS STEP **** */
     void Update() {
-<<<<<<< HEAD
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 
 		if (isGrounded) {
 			animator.SetBool ("Jumping", false);
-			jumpedOnce = false;
+			//jumpedOnce = false;
 			jumpedTwice = false;
 		}
 
@@ -81,14 +77,11 @@ public class PlayerController : MonoBehaviour
 			animator.SetBool ("SwordAttack", true);
 			GetComponent<Animator>().Play("playerSwordSwing");
 		}
-			
 
-		//if (Input.GetKeyDown ("o"))
-			//animator.SetBool ("SwordAttack", false);
-		if (playerHealth <= 0)
-            Death();
 
-=======
+        //if (Input.GetKeyDown ("o"))
+        //animator.SetBool ("SwordAttack", false);
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 
         if (isGrounded) {
@@ -115,7 +108,6 @@ public class PlayerController : MonoBehaviour
 
         if (playerHealth <= 0)
             Respawn();
->>>>>>> b6e2cc3e7c7da9e04f01b29a7a922e7ccb149162
     }
 
     void Move() {
