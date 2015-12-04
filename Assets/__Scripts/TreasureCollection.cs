@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class TreasureCollection : MonoBehaviour {
 
-    private int treasureTotal;
+    public static int treasureTotal;
     public Text countText;
     public Text winText;
 

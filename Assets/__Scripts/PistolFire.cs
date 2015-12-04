@@ -25,7 +25,7 @@ public class PistolFire : MonoBehaviour {
 		Debug.DrawRay (firePoint, newRay-firePoint,Color.blue);
 		else if(!explorer.isFacingRight() && firePoint.x > newRay.x)
 			Debug.DrawRay (firePoint, newRay-firePoint,Color.red);
-		if(Input.GetKeyDown ("i")){
+		if(Input.GetMouseButtonDown(0) || Input.GetKeyDown("space")){
 			//float newX = transform.position.x + 0
 			//Vector3 rightPosition = new Vector3(transform.position.x+.4f,transform.position.y+.2f,transform.position.z);
 			//Vector3 leftPosition = new Vector3(transform.position.x-.4f,transform.position.y-.2f,transform.position.z);
