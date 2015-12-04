@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour
 
 		if (isGrounded) {
 			animator.SetBool ("Jumping", false);
-			//jumpedOnce = false;
 			jumpedTwice = false;
 		}
 
@@ -58,18 +57,18 @@ public class PlayerController : MonoBehaviour
 			Sprint ();
 		}
 
-		if (Input.GetButtonDown ("Jump")) {
+		if (Input.GetKeyDown("w")) {
 			Debug.Log ("Jumping in Process");
 			Jump ();
 			Debug.Log ("Jumping Ended");
 		}
-		if (Input.GetMouseButtonDown (0)) {
-			GetComponent<Animator> ().Play ("PlayerAttackAnim");
-			Attack ();
-		}
-	
+        if (Input.GetKeyDown("f"))
+        {
+            GetComponent<Animator>().Play("PlayerAttackAnim");
+            Attack();
+        }
 
-		if (Input.GetMouseButtonUp (0))
+        if (Input.GetKeyDown("f"))
 			animator.SetBool ("Attacking", false);
 		if (animator.GetBool ("SwordAttack"))
 			animator.SetBool ("SwordAttack", false);
@@ -94,16 +93,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift)) {
             Sprint();
         }
-
-        if (Input.GetButtonDown ("Jump") && Time.time >= jumpTimeStamp) {
+   
+        if (Input.GetKeyDown("w") && Time.time >= jumpTimeStamp) {
 			jumpTimeStamp = Time.time + timeBetweenJumps;
 			Jump ();
 		}
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown("f"))
             Attack();
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetKeyDown("f"))
             animator.SetBool("Attacking", false);
 
         if (playerHealth <= 0)
