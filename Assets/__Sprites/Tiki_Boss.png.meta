@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 35558b3095ede2e43b33f6cc3e4d339a
+timeCreated: 1449258309
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Tiki_Boss_1
+    21300002: Tiki_Boss_7
+    21300004: Tiki_Boss_8
+    21300006: Tiki_Boss_9
+    21300008: Tiki_Boss_10
+    21300010: Tiki_Boss_11
+    21300012: Tiki_Boss_12
+    21300014: Tiki_Boss_13
+    21300016: Tiki_Boss_14
+    21300018: TikiBoss_0
+    21300020: Tiki_Boss_16
+    21300022: Tiki_Boss_17
+    21300024: Tiki_Boss_18
+    21300026: Tiki_Boss_Projectile
+    21300028: TikiBoss_1
+    21300030: TikiBoss_2
+    21300032: TikiBoss_3
+    21300034: TikiBoss_4
+    21300036: TikiBoss_6
+    21300038: TikiBoss_7
+    21300040: TikiBoss_8
+    21300042: TikiBoss_9
+    21300044: TikiBoss_10
+    21300046: TikiBoss_11
+    21300048: TikiBoss_12
+    21300050: TikiBoss_Projectile
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: TikiBoss_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_3
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_4
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_6
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_7
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_9
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_10
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_11
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TikiBoss_12
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 0
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
