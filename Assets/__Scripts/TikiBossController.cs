@@ -5,6 +5,7 @@ public class TikiBossController : MonoBehaviour {
 
 	public int health;
 	public PlayerController player;
+	public GameObject deathParticle;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,13 @@ public class TikiBossController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (health <= 0) {
+			Destroy (gameObject);
+			Instantiate(deathParticle, transform.position, transform.rotation);
+			Instantiate(deathParticle, transform.position, transform.rotation);
+			Instantiate(deathParticle, transform.position, transform.rotation);
+		}
 	
 	}
 
