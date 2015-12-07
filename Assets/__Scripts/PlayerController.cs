@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     public float groundRadius = 0.2f;
 	public GameObject spawnPoint;
+    public AudioClip jumpSound;
+    public AudioClip deathSound;
 
     /* **** PRIVATE **** */
     private Rigidbody2D player;
@@ -28,6 +30,12 @@ public class PlayerController : MonoBehaviour
     private bool jumpedTwice;
 	private float timeBetweenJumps = 0.3f;
 	private float jumpTimeStamp;
+    private AudioSource source;
+
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     /* **** ON START OF GAME, SETUP PLAYER **** */
     void Start() {
@@ -40,6 +48,10 @@ public class PlayerController : MonoBehaviour
 		Debug.Log (facingRight);
 		playerHealth = 100;
 		SetHealthText();
+
+        AudioSource[] audios = GetComponents<AudioSource>();
+        AudioSource death = audios[1];
+        AudioSource jumpSound = audios[3];
     }
 
     /* **** EXECUTED ONCE PER PHYSICS STEP **** */
@@ -139,10 +151,14 @@ public class PlayerController : MonoBehaviour
 
             player.AddForce(new Vector2(0, jumpForce));
             animator.SetBool("Jumping", true);
+
+            source.PlayOneShot(jumpSound, 0.3f);
+
         // If player is in the air, they made a single jump
         } else if (!isGrounded) {
             player.AddForce(new Vector2(0, jumpForce));
             jumpedTwice = true;
+            source.PlayOneShot(jumpSound, 0.3f);
         }        
     }
 
@@ -198,6 +214,7 @@ public class PlayerController : MonoBehaviour
         this.transform.position = spawnPoint.transform.position;
         playerHealth = 100;
         SetHealthText();
+        source.PlayOneShot(deathSound, 3f);
     }
 
 	IEnumerator ShowDamage() {
