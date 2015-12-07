@@ -7,10 +7,12 @@ public class PistolFire : MonoBehaviour {
 	public GameObject cursorPosition;
 	public GameObject explorerPosition;
 	public PlayerController explorer;
+    private AudioSource source;
+    public AudioClip gunShot;
 
 	// Use this for initialization
 	void Start () {
-	
+        source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -32,9 +34,10 @@ public class PistolFire : MonoBehaviour {
 			GameObject bullet;
 			Rigidbody2D exSpeed = explorer.getPlayer();
 			Rigidbody2D speed;
+            source.PlayOneShot(gunShot, 1.5f);
 
 
-			exSpeed = explorer.GetComponent<Rigidbody2D>();
+            exSpeed = explorer.GetComponent<Rigidbody2D>();
 			if(explorer.isFacingRight() && firePoint.x < newRay.x){
 				bullet = Instantiate(bulletPrefab, firingPoint.transform.position, firingPoint.transform.rotation) as GameObject;
 				//var _rel = bullet.transform.TransformDirection(exSpeed.velocity.x,exSpeed.velocity.y,0);
@@ -44,9 +47,9 @@ public class PistolFire : MonoBehaviour {
 
 				speed = bullet.GetComponent<Rigidbody2D>();
 
-				//bulletSpeed += exSpeed.velocity;
-				//speed.velocity += bulletSpeed;
-				speed.AddForce(bulletSpeed*100);
+                //bulletSpeed += exSpeed.velocity;
+                //speed.velocity += bulletSpeed;
+                speed.AddForce(bulletSpeed*100);
 				//speed.velocity = speed.velocity.normalized;
 				//speed.MoveRotation((float)(newRay-firePoint).x/(newRay-firePoint).y);
 				//speed.velocity = ((bulletSpeed*1)+exSpeed.velocity.normalized).normalized;
@@ -64,10 +67,11 @@ public class PistolFire : MonoBehaviour {
 			else if(!explorer.isFacingRight() && firePoint.x > newRay.x){
 				bullet = Instantiate(bulletPrefab, firingPoint.transform.position, firingPoint.transform.rotation) as GameObject;
 				speed = bullet.GetComponent<Rigidbody2D>();
+                
 
 
 
-				var bulletMove = new Vector2((newRay-firePoint).x  * 1, (newRay-firePoint).y * 1).normalized;
+                var bulletMove = new Vector2((newRay-firePoint).x  * 1, (newRay-firePoint).y * 1).normalized;
 				Vector2 bulletSpeed = new Vector2((newRay-firePoint).x , (newRay-firePoint).y).normalized;
 				//speed.velocity = new Vector2((newRay-firePoint).x  * 1, (newRay-firePoint).y * 1).normalized;
 				speed.AddForce(bulletSpeed*100);
