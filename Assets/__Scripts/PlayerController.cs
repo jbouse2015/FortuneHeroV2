@@ -159,6 +159,11 @@ public class PlayerController : MonoBehaviour
 	//Damage from hazards and health pickups
     void OnCollisionEnter2D(Collision2D collision)
     {
+		if (collision.gameObject.tag == "Enemy") {
+			playerHealth -= 10;
+			StartCoroutine (ShowDamage ());
+			SetHealthText ();
+		}
         if (collision.gameObject.tag == "Hazard")
         {
             playerHealth -= 5;
