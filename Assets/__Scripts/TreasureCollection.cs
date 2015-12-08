@@ -4,15 +4,26 @@ using UnityEngine.UI;
 
 public class TreasureCollection : MonoBehaviour {
 
-    private int treasureTotal;
+    public static int treasureTotal;
     public Text countText;
     public Text winText;
+
+    public AudioClip pickUpTreasure;
+    private AudioSource source;
+
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     void Start()
     {
         treasureTotal = 7;
         SetCountText();
         winText.text = "";
+
+        AudioSource[] audios = GetComponents<AudioSource>();
+        source = audios[4];
     }
 
     //if we collide with treasure destroy and decrement total
@@ -21,7 +32,8 @@ public class TreasureCollection : MonoBehaviour {
         if (collision.gameObject.tag == "Treasure") {
             treasureTotal -= 1;
             Destroy(collision.gameObject);
-            SetCountText(); 
+            SetCountText();
+            source.PlayOneShot(pickUpTreasure, 0.5f);
         }
     }
 
