@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public LayerMask whatIsGround;
     public float groundRadius = 0.2f;
-	public GameObject spawnPoint;
     public AudioClip jumpSound;
     public AudioClip deathSound;
 
@@ -211,9 +210,7 @@ public class PlayerController : MonoBehaviour
     //Respawn the player
     void Respawn()
     {
-        this.transform.position = spawnPoint.transform.position;
-        playerHealth = 100;
-        SetHealthText();
+        Application.LoadLevel(Application.loadedLevel);
         source.PlayOneShot(deathSound, 3f);
     }
 
