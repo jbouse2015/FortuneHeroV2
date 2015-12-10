@@ -36,6 +36,16 @@ public class TikiSpearController : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "Floor")
 			Destroy (gameObject);
+		if (other.gameObject.tag == "RevolverBullet") {
+			Destroy (gameObject);
+		}
+		if (other.gameObject.tag == "Health") {
+			Destroy (gameObject);
+		}
+		if (other.gameObject.tag == "Treasure") {
+			Destroy (gameObject);
+		}
+
 	}
 
 	void Flip() {

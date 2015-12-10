@@ -44,25 +44,23 @@ public class PistolFire : MonoBehaviour
                 //Vector3 rightPosition = new Vector3(transform.position.x+.4f,transform.position.y+.2f,transform.position.z);
                 //Vector3 leftPosition = new Vector3(transform.position.x-.4f,transform.position.y-.2f,transform.position.z);
                 GameObject bullet;
-
                 Rigidbody2D exSpeed = explorer.getPlayer();
                 Rigidbody2D speed;
-                source.PlayOneShot(gunShot, 1.5f);
-
+                source.PlayOneShot(gunShot, 1.5f);				
                 exSpeed = explorer.GetComponent<Rigidbody2D>();
                 if (explorer.isFacingRight() && firePoint.x < newRay.x)
                 {
                     bullet = Instantiate(bulletPrefab, firingPoint.transform.position, firingPoint.transform.rotation) as GameObject;
                     //var _rel = bullet.transform.TransformDirection(exSpeed.velocity.x,exSpeed.velocity.y,0);
                     //Vector2  v = bullet.
-
+					
                     Vector2 bulletSpeed = new Vector2((newRay - firePoint).x, (newRay - firePoint).y).normalized;
 
                     speed = bullet.GetComponent<Rigidbody2D>();
 
                     //bulletSpeed += exSpeed.velocity;
                     //speed.velocity += bulletSpeed;
-                    speed.AddForce(bulletSpeed * 100);
+                    speed.AddForce(bulletSpeed * 500);
                     //speed.velocity = speed.velocity.normalized;
                     //speed.MoveRotation((float)(newRay-firePoint).x/(newRay-firePoint).y);
                     //speed.velocity = ((bulletSpeed*1)+exSpeed.velocity.normalized).normalized;
@@ -77,18 +75,15 @@ public class PistolFire : MonoBehaviour
                     Destroy(bullet, 15f);
                     //Debug.Log(explorer.isFacingRight())
                 }
-                else if (!explorer.isFacingRight() && firePoint.x > newRay.x)
+			else if (!explorer.isFacingRight() && firePoint.x > newRay.x)
                 {
                     bullet = Instantiate(bulletPrefab, firingPoint.transform.position, firingPoint.transform.rotation) as GameObject;
-                    speed = bullet.GetComponent<Rigidbody2D>();
-
-
-
+                    speed = bullet.GetComponent<Rigidbody2D>();					
 
                     var bulletMove = new Vector2((newRay - firePoint).x * 1, (newRay - firePoint).y * 1).normalized;
                     Vector2 bulletSpeed = new Vector2((newRay - firePoint).x, (newRay - firePoint).y).normalized;
                     //speed.velocity = new Vector2((newRay-firePoint).x  * 1, (newRay-firePoint).y * 1).normalized;
-                    speed.AddForce(bulletSpeed * 100);
+                    speed.AddForce(bulletSpeed * 500);
                     //speed.velocity = 2 * speed.velocity.normalized;
                     //speed.velocity = transform.right*-15;
                     Debug.Log("Going Left");
@@ -96,7 +91,8 @@ public class PistolFire : MonoBehaviour
                 }
                 //Debug.Log(explorer.isFacingRight());
                 //Destroy (bullet,1);
-            }
+            } 
         
     }
+
 }
