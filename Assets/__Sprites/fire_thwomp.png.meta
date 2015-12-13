@@ -1,0 +1,134 @@
+fileFormatVersion: 2
+guid: 3fb0280208695f84589d7f8bffd9fa75
+timeCreated: 1449550385
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: fire_thwomp_6
+    21300002: fire_thwomp_7
+    21300004: fire_thwomp_8
+    21300006: fire_thwomp_9
+    21300008: fire_thwomp_10
+    21300010: fire_thwomp_11
+    21300012: fire_thwomp_12
+    21300014: fire_thwomp_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: fire_thwomp_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 167
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire_thwomp_7
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 174
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire_thwomp_8
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 119
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire_thwomp_9
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 117
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire_thwomp_10
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 116
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire_thwomp_11
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 114
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire_thwomp_12
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 56
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

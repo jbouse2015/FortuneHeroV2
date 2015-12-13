@@ -44,6 +44,7 @@ public class TreasureCollection : MonoBehaviour {
         if (treasureTotal == 0)
         {
             winText.text = "Level Complete!";
+            Application.LoadLevel("Level_2");
         }
     }
 }
