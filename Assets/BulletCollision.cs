@@ -10,7 +10,7 @@ public class BulletCollision : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		StartCoroutine (bulletExpire ());
 	}
 
 	void OnCollisionEnter(Collision collision){
@@ -27,5 +27,11 @@ public class BulletCollision : MonoBehaviour {
 		if(coll.gameObject.name != "Player")
 			Destroy (this.gameObject);
 		
+	}
+
+
+	IEnumerator bulletExpire() {
+		yield return new WaitForSeconds(0.3f);
+		Destroy (gameObject);
 	}
 }
