@@ -1,0 +1,55 @@
+Initialize engine version: 5.2.3f1 (f3d16a1fa2dd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 7800 Series (ID=0x6819)
+    Vendor:   ATI
+    VRAM:     2026 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Oxzilary\Documents\My Projects\FortuneHero\FortuneHero_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Oxzilary\Documents\My Projects\FortuneHero\FortuneHero_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Oxzilary\Documents\My Projects\FortuneHero\FortuneHero_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Oxzilary\Documents\My Projects\FortuneHero\FortuneHero_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Oxzilary\Documents\My Projects\FortuneHero\FortuneHero_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Oxzilary\Documents\My Projects\FortuneHero\FortuneHero_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Oxzilary\Documents\My Projects\FortuneHero\FortuneHero_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Oxzilary\Documents\My Projects\FortuneHero\FortuneHero_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Oxzilary\Documents\My Projects\FortuneHero\FortuneHero_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.140 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Oxzilary\Documents\My Projects\FortuneHero\FortuneHero_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2740 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 13.600688 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 206.
+Total: 0.277419 ms (FindLiveObjects: 0.020215 ms CreateObjectMapping: 0.017727 ms MarkObjects: 0.222059 ms  DeleteObjects: 0.016794 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.929913 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 2339.
+Total: 0.373209 ms (FindLiveObjects: 0.052560 ms CreateObjectMapping: 0.038253 ms MarkObjects: 0.272131 ms  DeleteObjects: 0.009641 ms)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+IndexOutOfRangeException: Array index is out of range.
+  at PlayerController.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IndexOutOfRangeException: Array index is out of range.
+  at TreasureCollection.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Custom cursor has been set.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+

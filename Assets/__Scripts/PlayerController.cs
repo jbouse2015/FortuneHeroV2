@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
 			Sprint ();
 		}
 
-		if (Input.GetKeyDown("w")) {
+		if (Input.GetKeyDown("w") || Input.GetKeyDown("up")) {
 			Debug.Log ("Jumping in Process");
 			Jump ();
 			Debug.Log ("Jumping Ended");

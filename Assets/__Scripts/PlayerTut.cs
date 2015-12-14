@@ -11,8 +11,8 @@ public class PlayerTut : MonoBehaviour {
 		if (other) {
 			float dist = Vector3.Distance(other.position, transform.position);
 			if (dist < 2) {
-				GUI.Box(new Rect(200, 50, 350, 210), "Collect all the treasure. \n" +
-					"Use A, D to move.\n W to jump.\n Left Shift to run.\n Left mouse or space key \n to fire.");
+				GUI.Box(new Rect(200, 50, 350, 210), "Level 1 \n Collect all the treasure \n" +
+					"Use A, D to move\n W to jump\n Left Shift to run\n Left mouse or space key \n to fire");
 			}
 		}
 	}

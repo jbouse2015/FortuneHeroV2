@@ -25,6 +25,7 @@ public class TikiSpearController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		spear.velocity = new Vector2 (speed, spear.velocity.y);
+		StartCoroutine (spearExpire ());
 
 	}
 
@@ -36,6 +37,21 @@ public class TikiSpearController : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "Floor")
 			Destroy (gameObject);
+		if (other.gameObject.tag == "RevolverBullet") {
+			Destroy (gameObject);
+		}
+		if (other.gameObject.tag == "Health") {
+			Destroy (gameObject);
+		}
+		if (other.gameObject.tag == "Treasure") {
+			Destroy (gameObject);
+		}
+
+	}
+
+	IEnumerator spearExpire() {
+		yield return new WaitForSeconds (2f);
+		Destroy (gameObject);
 	}
 
 	void Flip() {

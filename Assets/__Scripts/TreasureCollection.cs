@@ -44,8 +44,6 @@ public class TreasureCollection : MonoBehaviour {
         if (treasureTotal == 0)
         {
             winText.text = "Level Complete!";
-            System.Threading.Thread.Sleep(3000);
-            Application.LoadLevel("Level_Two");
         }
     }
 }
